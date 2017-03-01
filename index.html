@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subscription  Manager</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/forms.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/style-forms.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.min.css" media="all">
+<link rel="stylesheet" type="text/css" media="all" href="css/ui.jqgrid.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/jquery-ui-1.9.2.custom.css" />
+<link rel="stylesheet" type="text/css" href="css/jqgrid-sm-custom.css" media="all">
+<link rel="stylesheet" type="text/css" href="theme/telefonica/css/custom-styles.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/featherlight.min.css" media="all">
+  <!--[if IE]>
+   <style type="text/css">
+       select.select[class]{border-right: solid 0px transparent !important;padding-right: 0 !important;width: 101% !important; min-width: 0;}
+   </style>
+  <![endif]-->
+<script src="js/html5.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/i18n/grid.locale-en.js" type="text/javascript"></script>
+<script src="js/jquery.jqGrid.min.js" type="text/javascript"></script>
+<script src="js/jqgrid-data.js"></script>
+<script src="js/jqgrid-data-details.js"></script>
+<script src="js/jqgrid-data-overview.js"></script>
+<script src="js/ajax.js"></script>
+</head>
+<body>
+<div id="app-wrap">
+<div id="branding">
+  <ul  id="branding-list">
+    <li>
+      <div id="logo"></div>
+    </li>
+    <li>
+      <div id="app-logo">Subscription Manager</div>
+    </li>
+    <li>  <span id="status">Your last job, <span id="j-name"></span>, <span id="tense"></span> <strong id="j-stat"></strong></span>
+    </li>
+  <li id="log-list">
+    <span id="logged-in-as">$request.getRemoteUser()</span>
+      <a href="logout.do"><div id="log-out" class="custom-button"><span>Log Out</span></div></a>
+    </li>
+  </ul>
+</div>
+<div id="bottom-area">
+  <div>
+  <div id="date-stamp"></div>
+  <div id="info-body"style="">
+    <div id="left-area">
+      <div id="operations">
+        <h2 class="header"><span>Operations</span><a href="#right-panel" class="operations arrow slide right-panel-link"><span></span></a></h2>
+        <div id="main-form-wrap"></div>
+      </div>
+    </div>
+    <!-- Left panel -->
+    <div id="search-details" class="panel">
+      <h2 class="header" ><span>Search</span><span class="close-draw close-panel-bt"></span></h2>
+      <div class="left-shadow"></div>
+      <div class="content">
+         <div class="prefix">
+          <table id="search-list">
+            <tr>
+              <td></td>
+            </tr>
+          </table>
+          <table id="ICCID-search-list">
+            <tr>
+              <td></td>
+            </tr>
+          </table>
+          <div id="o-pager" class="page-bar">
+            <div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+
+    <!-- left2 panel -->
+    <div id="overview" class="panel">
+      <h2 class="header"><span>Group Overview</span><span class="close-draw close-panel-bt"></span></h2>
+      <div class="left-shadow"></div>
+      <div class="content">
+        <div id="overview-bar"><div><h3 id="current-group"></h3></div>
+            <div id="next_message" class="mod message">
+              <div> <span>You must choose a profile for each EID before you can proceed.</span> </div>
+            </div>
+        <div class="header"><span class="max-min active"></span></div></div>
+        <div class="prefix draw active">
+          <table id="overview-list">
+            <tr>
+              <td></td>
+            </tr>
+          </table>
+          <div id="o-pager" class="page-bar">
+            <div>
+              <div class="custom-button disable form-button" id="finished"><span>Next</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Right panel -->
+    <div id="right-panel" class="panel"> </div>
+    <!-- Centered page -->
+    <div id="page" style="">
+      <div id="panel-closer" class="active"><span></span></div>
+      <div class="header-line"></div>
+       <h2 class="header"><a href="#right-panel"class="arrow slide right-panel-link"></a><span>History</span><span id="history-search">Search</span><span class="max-min active"></span></h2>
+      <div id="history">
+
+        <div id="history-content" class="drawer active">
+          <div id="history-bar">
+            <div>
+              <form>
+                <span class="close-draw close-search close-panel-bt"></span>
+                <div class="refresh"><span>Refresh</span>
+                  <div class="refresh-icon"></div>
+                </div>
+
+                <h3>Display Records</h3>
+                <div id="record-dates">
+                <span class="date-wrap">
+                <label>from: </label>
+                <input type="text" id="from-date"class="datepicker">
+                </span> <span class="date-wrap">
+                <label>to: </label>
+                <input type="text" id="to-date"class="datepicker">
+                </span>
+                </div>
+                <div id="history-checks"> <span><em>for:</em></span> <span>
+                  <input id="subChange" type="checkbox" name="mod-history" value="true">
+                  Subscription<br />Change</span> <span>
+                  <input id="profileDownload" type="checkbox" name="mod-history" value="true">
+                  Download<br />Profile</span> <span>
+                  <input id="subStop" type="checkbox" name="mod-history" value="true">
+                  Delete<br />Subscription</span> </div>
+              </form>
+            </div>
+          </div>
+          <div class="prefix">
+            <table id="list">
+              <tr>
+                <td></td>
+              </tr>
+            </table>
+            <div id="d-pager" class="page-bar"></div>
+          </div>
+        </div>
+        <h2 class="header"><span>Details</span><span class="max-min"></span></h2>
+        <div id="history-detailscontent" class="drawer active">
+          <div id="details-bar">
+            <div>
+                <!-- <span class="close-draw close-search close-panel-bt"></span> -->
+                <div id="download-wrap"><span>Download</span>
+                <div class="download disable">
+                  <div class="download-icon"></div>
+                </div>
+            </div></div>
+          </div>
+          <div class="prefix">
+            <table id="details-list">
+              <tr>
+                <td></td>
+              </tr>
+            </table>
+            <div id="pager" class="page-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+<div id="boxes">
+        <div id="details-x" class="overlay-wrap overlay window"><div>
+          <h2 class="header"><span id="iccid-head"><span>ICCID </span><span id="iccid-ref"></span></span><span class="close-draw close"></h2>
+<div class="prefix">
+         <table id="details-overlay">
+            <tr>
+              <td></td>
+            </tr>
+          </table>
+          <div id="y-pager" class="page-bar">
+            <div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+  <div id="mask"></div>
+<a href='#details-x' class='modal-link' name='modal'></a>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.panelslider.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/overlay.js"></script>
+</body>
+</html>

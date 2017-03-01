@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subscription  Manager</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/forms.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/style-forms.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.min.css" media="all">
+<link rel="stylesheet" type="text/css" media="all" href="css/ui.jqgrid.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/jquery-ui-1.9.2.custom.css" />
+<link rel="stylesheet" type="text/css" href="css/jqgrid-sm-custom.css" media="all">
+<link rel="stylesheet" type="text/css" href="theme/$mnoUserInSession.mnoContext/css/custom-styles.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/featherlight.min.css" media="all">
+  <!--[if IE]>
+   <style type="text/css">
+       select.select[class]{border-right: solid 0px transparent !important;padding-right: 0 !important;width: 101% !important; min-width: 0;}
+   </style>
+  <![endif]-->
+<script src="js/html5.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/i18n/grid.locale-en.js" type="text/javascript"></script>
+<script src="js/jquery.jqGrid.min.js" type="text/javascript"></script>
+<script src="js/jqgrid-data.js"></script>
+<script src="js/jqgrid-data-details.js"></script>
+<script src="js/jqgrid-data-overview.js"></script>
+<script src="js/ajax.js"></script>
+<style type="text/css">
+#r404-img, #r404-404, #r404-wrap{
+  width:100%;
+  margin: auto;
+  text-align: center;
+}
+#r404-img img{
+  height: 200px;
+}
+ #r404-404{
+  margin-top: 50px;
+  height: 150px;
+ }
+  #r404-404 img{
+    height: 150px;
+  }
+ #r404-message{
+  font-size: 40px;
+  line-height: 40px;
+  padding-bottom: 15px;
+  display: block;
+ }
+ #home-links-message{
+  color: red;
+  font-size: 20px;
+  padding-right: 10px;
+  display: inline-block;
+  vertical-align: top;
+ }
+ #home-links-wrap{
+display: inline-block;
+text-align: left;
+ }
+  #home-links-wrap a{
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration: underline;
+ }
+</style>
+</head>
+<body>
+<div id="r404-404"><img src="images/404.png"/></div>
+<div id="r404-img"><img src="images/smeagol.png"/></div>
+<div id="r404-wrap"><span id="r404-message">Can't find the precious?</span>
+  <div id="home-wrap"><span id="home-links-message">Try visiting these kingdoms.</span>
+    <div id="home-links-wrap">
+    <a href="vzw/login.vm" id="go-vzw">Verizon Wireless</a><br/>
+  <a href="tf/login.vm" id="go-tf">Telefonica</a>
+</div>
+</div>
+</div>
+
+</body>
+</html>

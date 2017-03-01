@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<weblogic-web-app xmlns="http://xmlns.oracle.com/weblogic/weblogic-web-app" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://xmlns.oracle.com/weblogic/weblogic-web-app http://xmlns.oracle.com/weblogic/weblogic-web-app/1.0/weblogic-web-app.xsd">
+    <context-root>/sm</context-root>
+
+   <resource-description>
+        <res-ref-name>
+            jdbc/Modeling
+        </res-ref-name>
+        <jndi-name>
+            jdbc/Modeling
+        </jndi-name>
+    </resource-description>
+
+    <resource-description>
+        <res-ref-name>
+            jdbc/CompositeDataSource
+        </res-ref-name>
+        <jndi-name>
+            jdbc/CompositeDataSource
+        </jndi-name>
+    </resource-description>
+
+  <jsp-descriptor>
+    <page-check-seconds>30</page-check-seconds>
+  </jsp-descriptor>
+  <container-descriptor>
+    <servlet-reload-check-secs>30</servlet-reload-check-secs>
+  </container-descriptor>
+       <session-descriptor>
+           <cookie-http-only>true</cookie-http-only>
+           <cookie-secure>true</cookie-secure>
+    </session-descriptor>
+</weblogic-web-app>

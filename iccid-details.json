@@ -1,0 +1,39 @@
+{
+    "rows": [
+        {
+            "id": "1",
+            "cell": [
+                "Subscription IMSI",
+                "IMIS"
+            ]
+        },
+        {
+            "id": "3",
+            "cell": [
+                "Subscription MSISDN",
+                "value"
+            ]
+        },
+        {
+            "id": "2",
+            "cell": [
+                "MNO ID",
+                "value"
+            ]
+        },
+        {
+            "id": "8",
+            "cell": [
+                "MNO Name",
+                "value"
+            ]
+        },
+        {
+            "id": "8",
+            "cell": [
+                "Subscriber Type",
+                "value"
+            ]
+        }
+    ]
+}

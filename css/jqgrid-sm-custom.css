@@ -1,0 +1,304 @@
+.prefix .ui-corner-all, .prefix .ui-jqgrid .ui-jqgrid-pager {
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-khtml-border-radius: 0px;
+	border-radius: 0px;
+}
+.prefix .ui-state-default.ui-jqgrid-hdiv {
+	background: #ccc;
+	background-image: none;
+	border: none;
+}
+.prefix .ui-jqgrid .ui-th-column.ui-th-ltr {
+	text-align: left;
+	border: none;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	padding-bottom: 2px;
+	font-size: 12px;
+	color: #000;
+	text-transform: uppercase;
+	height: 20px;
+	background: url("../images/grad.png") repeat-x scroll 0 -7px transparent;
+}
+.prefix .ui-jqgrid .ui-jqgrid-htable th div {
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+#history-detailscontent .prefix .ui-jqgrid .ui-th-column.ui-th-ltr {
+}
+.prefix .ui-jqgrid tr.ui-row-ltr td {
+	text-align: left;
+	background: url("images/texture2.png") repeat scroll 0 0 transparent;
+	height: 16px;
+	border: none;
+	border-right: 1px solid #ccd5e2;
+	border-bottom: 1px solid #ccd5e2;
+	font-size: 12px;
+	padding: 5px;
+	white-space: pre-wrap;
+	color: #222;
+	vertical-align: middle;
+}
+.qr-image .qr-url {
+    background: url(images/qr-code-icon.png) center center no-repeat;
+    background-size: 100% auto;
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.prefix .ui-jqgrid tr.ui-row-ltr td{
+}
+.prefix tr .ui-th-column.ui-state-hover {
+	background: #999;
+	background-image: none;
+}
+.prefix .ui-jqgrid tr.ui-row-ltr.ui-state-hover td{
+color: #000;
+}
+.prefix .ui-jqgrid .ui-jqgrid-btable, .prefix .ui-jqgrid .ui-jqgrid-htable {
+	width: 100% !important
+}
+.prefix .ui-jqgrid .ui-jqgrid-hbox {
+	padding: 0px;
+	width: 100%;
+}
+.prefix #list_rn {
+	padding-left: 2px
+}
+.prefix .row-even {
+	background: #dce4ef;
+	border: none;
+}
+.prefix .row-odd {
+	background: #fff;
+	border: none;
+}
+.prefix .ui-state-hover.row-even, .prefix .ui-state-hover.row-odd {
+	background: #999;
+	color: #fff;
+}
+#search-details .prefix .ui-state-hover.row-even{
+	background: #dce4ef;
+}#search-details .prefix .ui-state-hover.row-odd {
+	background: #fff;
+}
+#history-content .prefix .row-even.ui-state-highlight, #history-content .prefix .row-odd.ui-state-highlight{
+	background: #29ABE2;
+	color:#fff;
+}
+#history-content .prefix .row-even.ui-state-highlight td, #history-content .prefix .row-odd.ui-state-highlight td{
+	color:#fff;
+}
+.prefix .ui-jqgrid .ui-jqgrid-pager {
+	height: 34px;
+	border: none;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	font-size: 12px;
+	padding: 5px;
+	background: #bfcee0;
+}
+.prefix .ui-jqgrid.ui-widget-content {
+	border: none;
+}
+.prefix .ui-jqgrid .ui-pg-table td {
+	color: #222;
+	font-size: 13px;
+	padding: 2px !important;
+}
+.prefix .ui-jqgrid .ui-pg-table td input {
+	font-size: 12px;
+	height: 22px;
+	padding: 0 2px;
+}
+.prefix .ui-jqgrid span.ui-separator {
+	border: 0;
+}
+.prefix td.jqgrid-rownum {
+	color: #999
+}
+.prefix .ui-jqgrid .ui-pg-selbox {
+	font-size: 12px;
+	height: 22px;
+	line-height: 26px;
+	margin-top: 0px;
+}
+.prefix .ui-jqgrid td.ui-pg-button {
+	border: none;
+}
+.prefix td.ui-pg-button .ui-icon {
+	border: 1px solid #999;
+	height: 20px;
+	width: 20px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+}
+.prefix #last_pager .ui-icon.ui-icon-seek-end {
+	background: transparent url(images/pager-icons.png) no-repeat 1px -24px;
+}
+.prefix #next_pager .ui-icon.ui-icon-seek-next {
+	background: transparent url(images/pager-icons.png) no-repeat 4px -75px;
+}
+.prefix #last_pager.ui-state-hover .ui-icon.ui-icon-seek-end {
+	background: transparent url(images/pager-icons.png) no-repeat 1px 2px;
+}
+.prefix #next_pager.ui-state-hover .ui-icon.ui-icon-seek-next {
+	background: transparent url(images/pager-icons.png) no-repeat 4px -49px;
+}
+.prefix #first_pager .ui-icon.ui-icon-seek-first {
+	background: transparent url(images/pager-icons.png) no-repeat -1px -127px;
+}
+.prefix #prev_pager .ui-icon.ui-icon-seek-prev {
+	background: transparent url(images/pager-icons.png) no-repeat 1px -178px;
+}
+.prefix #first_pager.ui-state-hover .ui-icon.ui-icon-seek-first {
+	background: transparent url(images/pager-icons.png) no-repeat -1px -101px;
+}
+.prefix #prev_pager.ui-state-hover .ui-icon.ui-icon-seek-prev {
+	background: transparent url(images/pager-icons.png) no-repeat 1px -152px;
+}
+/*----------------------------------------*/
+
+.prefix #last_d-pager .ui-icon.ui-icon-seek-end {
+	background: transparent url(images/pager-icons.png) no-repeat 1px -24px;
+}
+.prefix #next_d-pager .ui-icon.ui-icon-seek-next {
+	background: transparent url(images/pager-icons.png) no-repeat 4px -75px;
+}
+.prefix #last_d-pager.ui-state-hover .ui-icon.ui-icon-seek-end {
+	background: transparent url(images/pager-icons.png) no-repeat 1px 2px;
+}
+.prefix #next_d-pager.ui-state-hover .ui-icon.ui-icon-seek-next {
+	background: transparent url(images/pager-icons.png) no-repeat 4px -49px;
+}
+.prefix #first_d-pager .ui-icon.ui-icon-seek-first {
+	background: transparent url(images/pager-icons.png) no-repeat -1px -127px;
+}
+.prefix #prev_d-pager .ui-icon.ui-icon-seek-prev {
+	background: transparent url(images/pager-icons.png) no-repeat 1px -178px;
+}
+.prefix #first_d-pager.ui-state-hover .ui-icon.ui-icon-seek-first {
+	background: transparent url(images/pager-icons.png) no-repeat -1px -101px;
+}
+.prefix #prev_d-pager.ui-state-hover .ui-icon.ui-icon-seek-prev {
+	background: transparent url(images/pager-icons.png) no-repeat 1px -152px;
+}
+.ui-widget-content .ui-icon {
+	background-image: url("images/ui-icons_222222_256x240.png");
+}
+.ui-pg-button{
+background: transparent !important;
+}
+.s-ico {
+    margin-right: 25px;
+    margin-top: 0;
+    position: absolute;
+    right: 0px;
+    width: auto;
+    display: inline;
+    top: 0px;
+}
+#jqgh_list_dateInitiated .sortable{
+display: none;
+}
+.sortable {
+	/* background: transparent url(images/sortable.png) no-repeat; */
+	float: right;
+	width: 20px;
+	margin-left: -39px;
+	margin-right: 0px;
+	position: absolute;
+	top: 0px;
+}
+.sortable:before, .sortable:after {
+    background: none repeat scroll 0 0 #555;
+    content: "";
+    display: block;
+    height: 7px;
+    margin-top: -8px;
+    position: absolute;
+    right: 19px;
+    top: 50%;
+    -ms-transform: rotate(-45deg);; /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+    width: 1px;
+}
+.sortable:after {
+	right: 14px;
+    -ms-transform: rotate(-135deg);; /* IE 9 */
+    -webkit-transform: rotate(-135deg); /* Chrome, Safari, Opera */
+    transform: rotate(-135deg);
+}
+.prefix {
+	border-bottom: solid 1px #888;
+	border-top: solid 1px#000;
+}
+.ui-datepicker-header {
+	background: #999;
+	background-image: none;
+	border: none !important;
+	-moz-border-radius: 0px !important;
+	-webkit-border-radius: 0px !important;
+	-khtml-border-radius: 0px !important;
+	border-radius: 0px !important;
+}
+.ui-datepicker{
+	border: solid 1px #000;
+}
+.ui-datepicker-calendar td a.ui-state-default{
+	border: solid 1px #ccc;
+	color: #222;
+}
+.ui-datepicker-calendar td a.ui-state-default.ui-state-active{
+	border: solid 1px #ccc;
+	color: #fff;
+	background: #333;
+}
+.prefix .ui-jqgrid tr.ui-row-ltr td.msisdn-des{
+  line-height: 12px;
+  font-size: 11px;
+  vertical-align: top;
+  padding: 0;
+  width: auto;
+}
+.msisdn-disable, .msisdn-enable, #overview-list .jqgfirstrow td:last-child{
+	width:100px !important;
+	text-align: center !important;
+	}
+td.add-this{
+text-align: center !important;
+}
+.datepicker.hasDatepicker{
+	border: solid 1px #aaa;
+	border-top: solid 1px #555;
+}
+.ui-jqgrid .ui-icon-desc {
+	display: inline-block;
+    height: 16px;
+}
+.ui-jqgrid-labels{
+	background: #adafb2;
+}
+#ICCID-search-list .jqgfirstrow td:last-child, th#ICCID-search-list_iccidList, #ICCID-search-list tr td.details-link, #overview-list_profile_des, #search-list_details_des, #search-list .jqgfirstrow td:last-child{
+	width: auto !important;
+}
+.msisdnDescription, .iccid-details{
+  width: 100%;
+}
+.msisdnDescription td {
+    	background: url("images/texture2.png") repeat scroll 0 0 transparent !important;
+    line-height: 14px;
+    padding: 1px 5px !important;
+    width: 150px;
+    height: 17px !important;
+}
+.row-even .msisdnDescription td {
+    	background: url("images/texture2.png") repeat scroll 0 0 #acbed9  !important;
+}

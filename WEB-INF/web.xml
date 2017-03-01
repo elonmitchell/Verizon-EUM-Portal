@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <display-name>smdp</display-name>
+
+    <servlet>
+        <servlet-name>action</servlet-name>
+        <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+        <init-param>
+            <description>Disable Struts Multipart Handling for file uploads</description>
+            <param-name>multipartClass</param-name>
+            <param-value>none</param-value>
+        </init-param>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>velocity</servlet-name>
+        <servlet-class>
+            org.apache.velocity.tools.view.servlet.VelocityViewServlet
+        </servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>action</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>velocity</servlet-name>
+        <url-pattern>*.vm</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>authenticationFilter</filter-name>
+        <filter-class>com.motive.sm.webapp.authentication.AuthenticationFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>authenticationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <listener>
+        <listener-class>com.motive.sm.webapp.tasks.Tasks</listener-class>
+    </listener>
+
+    <!-- Security -->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>restricted methods</web-resource-name>
+            <url-pattern>/login.vm</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>*</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <!--Exclude css, fonts and images here-->
+        <web-resource-collection>
+            <web-resource-name>Exclude from Security</web-resource-name>
+            <url-pattern>/images/*</url-pattern>
+             <!--No security for images-->
+            <url-pattern>/css/*</url-pattern>
+             <!--No security for css-->
+            <url-pattern>/fonts/*</url-pattern>
+             <!--No security for fonts-->
+            <url-pattern>/login.vm</url-pattern>
+            <url-pattern>/vzw/login.vm</url-pattern>
+            <url-pattern>/tf/login.vm</url-pattern>
+            <url-pattern>/user/login.vm</url-pattern>
+        </web-resource-collection>
+    </security-constraint>
+
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/login.vm</form-login-page>
+            <form-error-page>/loginError.vm</form-error-page>
+        </form-login-config>
+    </login-config>
+
+
+    <security-role>
+        <role-name>SM_USER</role-name>
+    </security-role>
+
+    <security-role>
+        <role-name>VZW_MNO</role-name>
+    </security-role>
+
+    <security-role>
+        <role-name>TF_MNO</role-name>
+    </security-role>
+
+    <welcome-file-list>
+        <welcome-file>entryPoint.do</welcome-file>
+    </welcome-file-list>
+</web-app>

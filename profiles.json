@@ -1,0 +1,29 @@
+{
+
+    "groupContent": [
+        {
+            "id": "1",
+  "cell": [
+    {
+      "profileList": [
+        {
+          "msisdn": "123",
+          "iccid": "456",
+          "imsi":"1111",
+          "SUBSCRIPTIONTYPE": "Prepaid"
+        },
+        {
+          "msisid": "098",
+          "iccid": "765",
+          "imsi":"1111",
+          "SUBSCRIPTIONTYPE": "Prepaid"
+        }
+      ],
+      "eidList": [
+          "37930J496K38D954",
+          "296K58E0305L4830",
+          "495J63901K598362"
+      ]
+        }
+    ]
+}

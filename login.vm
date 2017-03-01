@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Subscription Manager</title>
+<link type="text/css" href="css/styles.css" media="screen" type="text/css" rel="stylesheet"/>
+<link type="text/css" href="css/forms.css" media="screen" type="text/css" rel="stylesheet"/>
+<link href="css/style-forms.css" media="screen" type="text/css" rel="stylesheet"/>
+</head>
+<body id="bstyle">
+        <div id="branding">
+  <ul  id="branding-list">
+    <li>
+      <div id="logo"></div>
+    </li>
+    <li>
+      <div id="app-logo">Subscription Manager</div>
+    </li>
+  </ul>
+</div>
+<center id="center">
+<div id="log_wrap">
+<form method="POST" action="login.do" id="log_in_form">
+<h2 class="login_message">Please Enter Your <br />Username & Password </h2>
+<span id="loginErrorId">
+#if ($loginErrorMsg)
+        $loginErrorMsg
+#end
+</span>
+
+<table>
+<tr><td>Username:</td><td><input type="text" name="username" class="element text medium"><br/><br/></td></tr>
+<tr><td>Password:</td><td><input type="password" name="password" class="element text medium"></td></tr>
+<tr><td colspan=2 align=right><div class="login_button"><button type="submit" class="custom-button form-button" value="Submit">Log In</td></button></div></tr>
+</table>
+</form>
+</div>
+</center>
+</body>
+</html>

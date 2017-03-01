@@ -1,0 +1,246 @@
+body {
+  font-family: Arial;
+  color: #e6e6e6;
+}
+.panel, #info-body {
+  background:  url("../images/fade-up.png") repeat-x scroll 0 bottom #0D3E50;
+  color: #222;
+}
+#history {
+  background:  none repeat-x scroll 0 bottom #0D3E50;
+  height: 100%;
+}
+#bottom-area {
+    outline: 1px solid #222;
+}
+#left-area {
+  position: fixed;
+  height: 100%;
+}
+.left-shadow {
+  background: url("../images/shadow-left.png") repeat-y scroll -12px 0 transparent;
+}
+#page {
+  background: url("../images/shadow.png") repeat-y scroll 0 0 #222;
+}
+#operations {
+}
+#app-wrap {
+    background: url("../images/fade-up-dark.png") repeat-x scroll 0 bottom #00637A;
+    border: solid 1px #3b92a4;
+}
+#branding {
+    background-color: #00637A;
+}
+.header {
+  color: #e6e6e6;
+  background: url("../images/header-grad.png") repeat-x scroll 0 0 #003245;
+}
+.header, .header:after {
+  background-image: none;
+}
+.panel .header {
+  border-left: 8px solid #000;
+}
+.custom-button span {
+  background: #D4E34A;
+    color: #003245;
+}
+.custom-button, #panel-closer, .download .download-icon {
+  background-color: #D4E34A;
+  color: #003245;
+} span.date-wrap img{
+  background: #096;
+}
+.refresh .refresh-icon {
+    background: url("../images/refresh-icon.png") no-repeat scroll 4px 2px #D4E34A;
+}
+#panel-closer {
+border-right: solid 1px #555;
+ width: 7px;
+}#panel-closer:hover {
+ background: #096;
+}
+#panel-closer.active span:after, #panel-closer span:after  {
+    border-color: transparent #003245 transparent transparent;
+}
+
+.custom-button:hover span, .custom-button:hover {
+  background: #096;
+    color: #fff;
+}
+.download .download-icon {
+    background: url("../images/download.png") no-repeat scroll 4px 4px #D4E34A;
+
+}
+.icon-button .arrow {
+    background: url("../images/button-arrow-icon.png") no-repeat scroll 0 0 transparent;
+}
+#history-search {
+    border: none;
+    color: #D4E34A;
+    margin-top: 4px;
+}
+#history-search:before, #history-search:after  {
+    border-top: 2px solid #D4E34A;
+}
+#history-search:hover:before, #history-search:hover:after, .header .max-min:hover:before, .header .max-min:hover:after {
+    border-color: #096 !important;
+}
+#history-search:after {
+    border: 1px solid #D4E34A;
+}
+#history .header{
+  border-top: solid 1px #000;
+}
+#logo {
+  background: transparent url(../images/logo3.png) no-repeat;
+  width: 150px;
+  height: 70px;
+}
+.header .max-min {
+}
+.date-wrap img {
+  background: #ED1C24;
+}
+#history-bar,#overview-bar, #details-bar {
+  background:  url("../images/grad.png") repeat-x scroll 0 -3px #205773;
+  color: #e6e6e6;
+}.prefix .ui-jqgrid .ui-th-column.ui-th-ltr {
+    background:  url("../images/grad.png") repeat-x scroll 0 0 transparent;
+        border-color: #555 #555;
+}
+.panel:before, #history:after, #operations #main-form-wrap, form#log_in_form  {
+    background: url("../images/texture.png") repeat scroll 0 0 transparent;
+}
+#operations, #log_wrap {
+    background: url("../images/long-grad.png") repeat-x scroll 0 0 #0D3E50;
+}
+.ui-jqgrid-labels {
+    background: #4F86A7;
+}
+.prefix .row-even {
+    background: none repeat scroll 0 0 #F1F3F2;
+    border: medium none;
+}
+.prefix .ui-jqgrid .ui-jqgrid-htable th div {
+    color: #e6e6e6;
+}
+.prefix .ui-jqgrid .ui-jqgrid-pager,#o-pager  {
+    background: #4E85A6;
+
+}#operations, #log_wrap, #bottom-area > div {
+outline: none;
+}#status{
+    background: #3b879a;
+}#app-logo {
+    color: #5fb7e9;
+    margin-top: 19px;
+}
+.header .max-min:before, .header .max-min.active:after, .close-draw.close-search:after, .close-draw.close-search:before {
+border-color: #D4E34A !important;
+  }
+  .disable, .disable span, .disable div {
+    background-color: #5c849b !important;
+}#main-form-wrap .custom-button {
+    border: none;
+}
+label.choice, form li div label{
+  color: #aaa;
+}
+label.description {
+   color: #e6e6e6; 
+}
+form li {
+    border-bottom: 2px ridge #4F86A7;
+}
+.message, .error {
+    background: #ffcccc;
+    border-color: #f66;
+    color: #222;
+}
+
+.prefix td.ui-pg-button .ui-icon {
+    border: 1px solid #00637A;
+    border-radius: 5px;
+    height: 20px;
+    width: 20px;
+}
+.prefix #last_pager .ui-icon.ui-icon-seek-end {
+  background: transparent url(../images/pager-icons.png) no-repeat 1px -24px;
+}
+.prefix #next_pager .ui-icon.ui-icon-seek-next {
+  background: transparent url(../images/pager-icons.png) no-repeat 4px -75px;
+}
+.prefix #last_pager.ui-state-hover .ui-icon.ui-icon-seek-end {
+  background: transparent url(../images/pager-icons.png) no-repeat 1px 2px;
+}
+.prefix #next_pager.ui-state-hover .ui-icon.ui-icon-seek-next {
+  background: transparent url(../images/pager-icons.png) no-repeat 4px -49px;
+}
+.prefix #first_pager .ui-icon.ui-icon-seek-first {
+  background: transparent url(../images/pager-icons.png) no-repeat -1px -127px;
+}
+.prefix #prev_pager .ui-icon.ui-icon-seek-prev {
+  background: transparent url(../images/pager-icons.png) no-repeat 1px -178px;
+}
+.prefix #first_pager.ui-state-hover .ui-icon.ui-icon-seek-first {
+  background: transparent url(../images/pager-icons.png) no-repeat -1px -101px;
+}
+.prefix #prev_pager.ui-state-hover .ui-icon.ui-icon-seek-prev {
+  background: transparent url(../images/pager-icons.png) no-repeat 1px -152px;
+}
+/*----------------------------------------*/
+
+.prefix #last_d-pager .ui-icon.ui-icon-seek-end {
+  background: transparent url(../images/pager-icons.png) no-repeat 1px -24px;
+}
+.prefix #next_d-pager .ui-icon.ui-icon-seek-next {
+  background: transparent url(../images/pager-icons.png) no-repeat 4px -75px;
+}
+.prefix #last_d-pager.ui-state-hover .ui-icon.ui-icon-seek-end {
+  background: transparent url(../images/pager-icons.png) no-repeat 1px 2px;
+}
+.prefix #next_d-pager.ui-state-hover .ui-icon.ui-icon-seek-next {
+  background: transparent url(../images/pager-icons.png) no-repeat 4px -49px;
+}
+.prefix #first_d-pager .ui-icon.ui-icon-seek-first {
+  background: transparent url(../images/pager-icons.png) no-repeat -1px -127px;
+}
+.prefix #prev_d-pager .ui-icon.ui-icon-seek-prev {
+  background: transparent url(../images/pager-icons.png) no-repeat 1px -178px;
+}
+.prefix #first_d-pager.ui-state-hover .ui-icon.ui-icon-seek-first {
+  background: transparent url(../images/pager-icons.png) no-repeat -1px -101px;
+}
+.prefix #prev_d-pager.ui-state-hover .ui-icon.ui-icon-seek-prev {
+  background: transparent url(../images/pager-icons.png) no-repeat 1px -152px;
+}
+.ui-widget-content .ui-icon {
+    background-image: url("../images/ui-icons_222222_256x240.png");
+}
+#history-search:hover, #history-search:hover:before, #history-search:hover:after, 
+.close-draw.close-search:hover:after, .close-draw.close-search:hover:before {
+    color: #096 !important;
+}
+#history-content .prefix .row-even.ui-state-highlight, #history-content .prefix .row-odd.ui-state-highlight {
+    background: none repeat scroll 0 0 #4ad0e9;
+}
+.sortable:before, .sortable:after {
+    background: none repeat scroll 0 0 #bbb;
+}
+.prefix .ui-state-hover.row-even, .prefix .ui-state-hover.row-odd {
+    background: none repeat scroll 0 0 #8cb1c8;
+}
+div.styled, input[type="submit"], input[type="button"], input[type="file"]:after {
+    background: url("../images/formelements-select.png") no-repeat scroll right center white;
+}
+.prefix .ui-jqgrid .ui-pg-table td {
+    color: #e6e6e6;
+}
+#status strong {
+    color: #fff;
+}
+#overview-bar h3 {
+    color: #e6e6e6;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Subscription Manager TF</title>
+<link type="text/css" href="../css/styles.css" media="screen" type="text/css" rel="stylesheet"/>
+<link type="text/css" href="../css/forms.css" media="screen" type="text/css" rel="stylesheet"/>
+<link href="../css/style-forms.css" media="screen" type="text/css" rel="stylesheet"/>
+</head>
+<body id="bstyle" class="tf" onload='setFocusToTextBox()'>
+        <div id="branding">
+  <ul  id="branding-list">
+    <li>
+      <div id="logo"></div>
+    </li>
+    <li>
+      <div id="app-logo">Subscription Manager</div>
+    </li>
+  </ul>
+</div>
+<center id="center">
+<div id="log_wrap">
+<form method="POST" action="login.do" id="log_in_form" onsubmit="return checkLength()">
+<h2 class="login_message">Please Enter Your <br />Username & Password </h2>
+<span id="loginErrorId" class="message">
+  #if ($loginErrorMsg)
+        $loginErrorMsg
+#end</span>
+<table>
+<tr><td width="80">Username:</td><td><input type="text" name="username" class="element text medium" id="userName" width="190" maxlength="25" onkeypress="checkLength()" onblur="checkLength()"><br/>
+  <div id="min-length"></div><br/>
+</td></tr>
+<tr><td>Password:</td><td><input type="password" name="password"  id="passwdid" class="element text medium" width="190" maxlength="25" onkeypress="checkLength()" onblur="checkLength()"></td></tr>
+<tr><td colspan=2 align=right><div class="login_button"><button type="submit"  id="subButtonId" class="custom-button form-button disable" value="Submit" onclick="errorOn()" disabled="disable">Log In</td></button></div></tr>
+</table>
+</form>
+</div>
+</center>
+<script>
+function setFocusToTextBox(){
+    document.getElementById("userName").focus();
+        errorOn();
+//      checkLength();
+
+}
+function checkLength(){
+    var textbox = document.getElementById("userName");
+    var minMessage = document.getElementById("min-length");
+    var subButton = document.getElementById("subButtonId");
+    var passwd = document.getElementById("passwdid");
+    if(textbox.value.length <= 25 && textbox.value.length >= 3){
+       minMessage.innerHTML="";
+       minMessage.className="";
+		setTimeout(function(){  if(passwd.value.length) {
+                subButton.removeAttribute("disabled");
+                subButton.classList.remove("disable");
+        }else{
+                subButton.setAttribute("disable", "disabled");
+                subButton.classList.add("disable");
+
+        }}, 500);
+    }
+    else{
+        minMessage.innerHTML="Username must be between 4-25 characters.";
+        minMessage.className="message";
+        return false;
+    }
+
+
+
+}
+function errorOn(){
+  var error = document.getElementById("loginErrorId")
+    if(error.innerHTML.length < 5){
+        error.className="message";
+    }
+    else{
+     error.className="message error";
+    }
+
+}
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,167 @@
+<script src="js/jquery.validate.min.js"></script>
+<form id="main-form">
+  <ul >
+    <li class="no-line">
+       <div class="styled">
+        <select class="element select medium has-button" id="start_operation" >
+          <option value="" selected="selected">Select Task</option>
+          <option value="search_operation">Search</option>
+          <option value="modify_operation">Modify Subscription</option>
+        </select></div>
+        <br />
+    </li>
+    <!--///////////////////Search radio buttons ///////////////////////// --> 
+    <li id="search_li" class="no-line hidden mod">
+      <br />
+      <div  class="half">
+        <input id="search_by_EID" name="search_by" class="element radio" type="radio" value="MSISDN" checked/>
+        <label class="choice" for="search_by_EID">EID</label>
+      </div>
+      <div class="half">
+        <input id="search_by_ICCID" name="search_by" class="element radio" type="radio" value="ICCID" />
+        <label class="choice" for="search_by_ICCID">ICCID</label>
+      </div>
+    </li>
+    <!--/////////////////// End Search radio buttons ///////////////////////// --> 
+    <!--/////////////////// Search field ///////////////////////// --> 
+<li id="search_field_li" class="hidden mod">
+      <label class="description" for="search_field"> </label>
+        
+      <div style="float: left; width: 79%;">
+        <input type="text" id="search_field" name="search_field" class="element text medium has-button error" maxlength="25" value="">
+ </div>
+  <a id="search-details-link" href="#search-details" class="disable form-button">
+        <div class="custom-button icon-button arrow"><span>
+          <div class="arrow"></div>
+          </span></div>
+        </a>
+    </li>
+    <!--/////////////////// End search field ///////////////////////// --> 
+        <!--/////////////////// Modify ///////////////////////// -->
+          <li id="modify_li" class="mod hidden">
+            <br />
+                  <div >
+        <input id="modify_profile" name="modify" class="element radio" type="radio" value="profile" />
+        <label class="choice" for="modify_profile">Download Profile</label>
+      </div>
+      <div >
+        <input id="modify_change" name="modify" class="element radio" type="radio" value="change" />
+        <label class="choice" for="modify_change">Subscription Change</label>
+      </div>
+      <div >
+        <input id="modify_stop" name="modify" class="element radio" type="radio" value="stop" />
+        <label class="choice" for="modify_stop">Delete Subscription</label>
+      </div>
+    </li>
+    <!--/////////////////// End Modify ///////////////////////// --> 
+    <!--/////////////////// group ///////////////////////// -->
+    <li id="group_li" class="mod hidden">
+      <label class="description" for="groups">Group </label>
+     
+        <div class="styled">
+        <select class="element select medium has-button" id="group" name="groups">
+          <option value="" selected="selected">Select Group</option>
+        </select></div>
+        <a  id="overview-link" href="#overview" class="disable form-button">
+        <div class="custom-button icon-button"><span>
+          <div class="arrow"></div>
+          </span></div>
+        </a> 
+        <!--
+      <div id="create-group">
+        <div class="custom-button icon-button disable"><span>
+          <div class="text-icon">+</div>
+          </span></div>
+        <span id="create-group-label">Create Group</span> </div>
+      -->
+    </li>
+    <!--/////////////////// End group ///////////////////////// --> 
+     <!--/////////////////// Search field ///////////////////////// --> 
+    <li id="job_field_li" class="hidden mod">
+      <label class="description" for="job_field">Job Name</label>
+      <div>
+        <input id="job_field" name="job_field" class="element text medium has-button" type="text" maxlength="255"/><div id="check_job_name" class=""></div>
+      </div>
+    </li>
+    <!--/////////////////// End search field ///////////////////////// --> 
+    <!--/////////////////// description ///////////////////////// -->
+    <li id="description_li" class="hidden mod">
+      <div>
+        <label class="description" for="job">Description</label>
+        <textarea id="job-description" name="job" class="element textarea medium"></textarea>
+      </div>
+    </li>
+    
+    <!--/////////////////// End description ///////////////////////// --> 
+    <!--/////////////////// Message ///////////////////////// -->
+    <li id="profile_message" class="hidden mod message">
+      <div> <span>You must choose a profile for each EID before you can proceed.</span> </div>
+    </li>
+    <!--/////////////////// End Message///////////////////////// --> 
+    <!--/////////////////// set state Change  ///////////////////////// -->
+    <li id="state_change" class="hidden mod state">
+      <label class="description" for="set_state">Set State </label>
+      <div  class="half">
+        <input id="en" name="set_state" class="element radio" type="radio" value="enable" />
+        <label class="choice" for="en">Enable</label>
+      </div>
+      <div class="half">
+        <input id="dis" name="set_state" class="element radio" type="radio" value="disable" />
+        <label class="choice" for="dis">Disable</label>
+      </div>
+    </li>
+    
+    <!--/////////////////// End set state Change  ///////////////////////// --> 
+    <!--/////////////////// set state Download  ///////////////////////// -->
+    <li id="state_profile" class="hidden mod state">
+      <label class="description" for="set_state">Set State </label>
+      <div  class="half">
+        <input id="enable_profile" name="set_state" class="element radio" type="checkbox" value="true" checked />
+        <label class="choice" for="en1">Enable</label>
+      </div>
+    </li>
+    
+    <!--/////////////////// End set state download -->
+    <!--/////////////////// set state Stop ///////////////////////// -->
+    <li id="state_stop" class="hidden mod state">
+      <label class="description" for="set_state">Set State </label>
+      <div  class="half">
+        <input id="dis1" name="set_state" class="element radio" type="radio" value="disable" />
+        <label class="choice" for="dis1">Disable</label>
+      </div>
+      <div class="half">
+        <input id="del2" name="set_state" class="element radio" type="radio" value="delete" />
+        <label class="choice" for="del2">Delete</label>
+      </div>
+    </li>
+    
+    <!--/////////////////// End set state Stop ///////////////////////// --> 
+    <!--/////////////////// EID list ///////////////////////// --> 
+    <!--
+    <li id="list_li" class="hidden mod">
+      <label class="description" for="eid">EID List Review </label>
+      <div>
+        <div id="eid-list" name="eid"></div>
+      </div>
+    </li>
+  --> 
+    <!--/////////////////// End EID list ///////////////////////// --> 
+    <!--/////////////////// submit ///////////////////////// -->
+    <li id="submit_li" class="no-line hidden mod">
+      
+      <div class="but_rt">
+        <div id="submit-operations" class="custom-button disable form-button"><span>Submit</span></div>
+      </div>
+    </li>
+    <!--/////////////////// End submit ///////////////////////// -->
+    <!--/////////////////// message ///////////////////////// -->
+    <li id="request_li" class="no-line hidden mod">
+      <div id="request-message" class="message"><div><span></span></div></div>
+    </li>
+  </ul>
+</form>
+<script src="js/form.js"></script>
+
+
+
+

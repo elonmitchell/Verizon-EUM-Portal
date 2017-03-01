@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor 
+	license agreements. See the NOTICE file distributed with this work for additional 
+	information regarding copyright ownership. The ASF licenses this file to 
+	you under the Apache License, Version 2.0 (the "License"); you may not use 
+	this file except in compliance with the License. You may obtain a copy of 
+	the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required 
+	by applicable law or agreed to in writing, software distributed under the 
+	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
+	OF ANY KIND, either express or implied. See the License for the specific 
+	language governing permissions and limitations under the License. -->
+
+<struts-config>
+	<global-forwards>
+		<!--<forward name="entryPoint" path="EntryPoint.do" redirect="true" /> -->
+	</global-forwards>
+	<action-mappings>
+
+		<!-- Group Management /> -->
+		<action path="/getGroupsMNO"
+			type="com.motive.sm.webapp.actions.group.RetrieveGroupsByMNO">
+		</action>
+		 <action path="/getJobHistory"
+			type="com.motive.sm.webapp.actions.group.RetrieveJobHistory">
+		</action>
+		  <action path="/getJobDetails"
+			type="com.motive.sm.webapp.actions.group.RetrieveJobDetails">
+		</action>
+		 <action path="/getEIDListByGroupName"
+                        type="com.motive.sm.webapp.actions.group.RetrieveEIDDetailsByGroupName">
+                </action>
+
+		<action path="/getLikeEID"
+				type="com.motive.sm.webapp.actions.group.RetrieveLikeEID">
+		</action>
+
+		<action path="/getLikeICCID"
+				type="com.motive.sm.webapp.actions.group.RetrieveLikeICCID">
+		</action>
+
+		<action path="/getICCIDDetails"
+				type="com.motive.sm.webapp.actions.group.RetrieveICCIDDetails">
+		</action>
+
+		<action path="/getMSISDNDetails"
+				type="com.motive.sm.webapp.actions.group.RetrieveMSISDNDetails">
+		</action>
+
+		<action path="/getEIDDetailsByMsisdn"
+				type="com.motive.sm.webapp.actions.group.RetrieveEidDetailsByMsisdn">
+		</action>
+
+		<action path="/modProfile"
+				type="com.motive.sm.webapp.actions.profile.DownloadProfile">
+		</action>
+
+		<action path="/modChange"
+				type="com.motive.sm.webapp.actions.profile.SubscriptionChange">
+		</action>
+
+		<action path="/modStop"
+				type="com.motive.sm.webapp.actions.profile.SubscriptionStop">
+		</action>
+
+		<action path="/downloadJobDetails"
+				type="com.motive.sm.webapp.actions.export.ExportJobDetails">
+		</action>
+<!-- 
+        <action path="/generateQR"
+				type="com.motive.sm.webapp.actions.QR.QRByEIDandMSISDN">
+		</action>r
+ -->
+        <action path="/generateQR"
+				type="com.motive.sm.webapp.actions.QR.QRByEIDProfileIDandICCID">
+		</action>
+		
+        <!-- EntryPoint -->
+        <action path="/*/entryPoint" type="com.motive.sm.webapp.actions.EntryPoint">
+            <forward name="default" path="/welcome.vm"  redirect="true"/>
+        </action>
+        <!-- Login -->
+        <action path="/*/login" type="com.motive.sm.webapp.actions.Login">
+            <forward name="success" path="/welcome.vm" redirect="true"/>
+        </action>
+        <!-- Logout -->
+        <action path="/logout" type="com.motive.sm.webapp.actions.Logout">
+            <forward name="default" path="/404.vm" redirect="true"/>
+        </action>
+
+	</action-mappings>
+</struts-config>

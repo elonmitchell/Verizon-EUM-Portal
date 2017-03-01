@@ -1,0 +1,54 @@
+body {
+  font-family: Arial;
+}
+.panel, #info-body {
+  background:  url("../../../images/fade-up.png") repeat-x scroll 0 bottom #E7E8E8;
+  color: #222;
+}
+#history {
+  background:  url("../../../images/fade-up.png") repeat-x scroll 0 bottom #E7E8E8;
+  height: 100%;
+}
+#left-area {
+  position: fixed;
+  height: 100%;
+}
+.left-shadow {
+  background: url("../images/shadow-left.png") repeat-y scroll -12px 0 transparent;
+}
+#page {
+  background: url("../images/shadow.png") repeat-y scroll 0 0 transparent;
+}
+#operations {
+}
+.header {
+  color: white;
+  background: url("../images/header-grad.png") repeat-x scroll 0 0 #4E4E4E;
+}
+.panel .header {
+  border-left: 8px solid #000;
+}
+.custom-button span {
+  background: #ED1C24;
+}
+.custom-button {
+  background: #ED1C24;
+}
+.custom-button:hover span, .custom-button:hover {
+  background: #000;
+}
+#app-logo {
+}
+#logo {
+  background: transparent url(../images/logo3.png) no-repeat;
+  width: 110px;
+  height: 70px;
+}
+.header .max-min {
+}
+.date-wrap img {
+  background: #ED1C24;
+}
+#history-bar,#overview-bar, #details-bar, #search-id-bar {
+  background:  url("../../../images/grad.png") repeat-x scroll 0 -3px #ccc
+}

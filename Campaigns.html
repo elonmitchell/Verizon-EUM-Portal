@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Lakeline Theme UI Elements</title>
+
+    <!-- Bootstrap -->
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="libs/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="libs/dataTables/extensions/ColReorder/css/colReorder.dataTables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="libs/jstree/themes/proton/style.min.css">
+    <link href="libs/slider/bootstrap-slider.css" rel="stylesheet">
+    <link href="libs/lakeline/css/lakeline.css" rel="stylesheet">
+    <link href="libs/lakeline/css/off-canvas.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+    body{ 
+        background: #e6e6e6;
+    }
+    /* tables */
+    .table-wrap{
+      background: #FAFAFA;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    .table-wrap h2{
+      margin: 5px 0 60px 0;
+      color: #3AB8EF;
+
+    }
+    .table-wrap h2 i{
+      color: #999;
+    }
+    .col-search{
+      color: #333;
+      width: 100%;
+      border-radius: 3px;
+      border-style: solid;
+      border-width: 1px;
+      padding: 4px;
+      font-size: .9em;
+      font-weight: 400;
+    }
+    .dataTables_wrapper > div:first-child > div {
+      background: transparent;
+      color: #000;
+      padding: 0 0 15px;
+    }
+    .dataTables_wrapper > div:last-child > div {
+      background: transparent;
+      color: #000;
+      padding-top : 20px;
+    }
+    .dataTables_wrapper .dataTables_length, 
+    .dataTables_wrapper .dataTables_filter { 
+    background: transparent;
+    color: #000;
+    }
+    .dataTable tfoot tr th {
+    background: transparent;
+    border: 0 none;
+    color: #333;
+    padding: 10px 4px 0;
+    }
+    .dataTable tr td {
+    white-space: nowrap;
+    max-width: 200px;
+    overflow-x: auto;
+    }
+    .dataTable .i-btn{
+      width: 100%;
+      text-align: center;
+    }
+    .dataTable .status{
+      float: left;
+      display: inline-block;
+      padding-right: 30px;
+    }
+    .dataTable .i-btn.status{
+      width: auto;
+      float: right;
+      margin-left: -20px;
+      padding-right: 0;
+      display: inline-block;
+    }
+    .dataTable .i-btn i{
+      cursor: pointer;
+      color: #4889D8;
+      font-size: 18px;
+      vertical-align: middle;
+    }
+    .dataTable .i-btn i.delete{
+      color: #CD0A0A;
+      font-size: 24px;
+      font-style: normal;
+      line-height: 14px;
+      vertical-align: text-top;
+    }
+    .dataTable .i-btn i{
+      cursor: pointer;
+    }
+    .dataTable .i-btn i.success{
+      color: #999;
+    }
+    .dataTable .i-btn i.success:before{
+      content: "\e988";
+    }
+    .dataTable .i-btn i.active{
+      color: #000;
+    }
+    .dataTable .i-btn i.active:before{
+      content: "\e989";
+    }
+    .dataTable span.inactive{
+      color: #E0862D;
+    }
+    .dataTable .i-btn i.inactive:before{
+      content: "\e987";
+    }
+    .dataTable span.success{
+      color: #44BE43;
+    }
+    .dataTable.table-bordered {
+    border: 0;
+    }
+    .pagination > li > a,
+    .pagination > li > span {
+    border-radius: 20px;
+    border: 0;
+    }
+    .pagination > li.paginate_button > a,
+    .paginate_button.previous > a, 
+    .paginate_button.next > a, 
+    .paginate_button.first > a, 
+    .paginate_button.last > a {
+    border-radius: 20px !important;
+    background: #DDE7ED;
+    }
+    .pagination > li > a:hover{
+      border: solid 1px #4889D8;
+    }
+    .dataTables_length label{
+      margin-right: 100px !important;
+    }
+    .dataTables_filter label{
+      margin-left: 40px !important;
+    }
+    .dataTables_filter a{
+      font-size: 1.2em;
+    }
+    .dataTables_filter a i{
+      margin-right: 5px;
+    }
+    /* end tables */
+
+    .quick-links{
+        width: auto;
+        height: auto;
+        padding: 10px;
+        display: inline-block;
+        background: #FFF;
+
+    }
+    .quick-links li{
+        list-style: none;
+        vertical-align: middle;
+        float: left;
+        clear: left;
+        padding: 10px 0;
+    }
+    .quick-links i{
+        font-size: 30px;
+        float: left;
+        color: #999;
+    }
+    .quick-links li .toggle{
+        margin-left: 15px;
+        float: left;
+    }
+    .quick-nav li{
+        list-style: none;
+        vertical-align: middle;
+        float: left;
+        padding: 10px;
+    }
+    .quick-nav i{
+        font-size: 22px;
+        color: #4889D8;
+        float: left;
+    }
+    .quick-nav span{
+        display: inline-block;
+        float: left;
+        font-size: 18px;
+        margin-left: 5px;
+    }
+    .hide{
+        display: none;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- navbar-collapse -->
+    <nav class="navbar navbar-default col-sm-12">
+        <!-- container-fluid -->
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="offcanvas" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"></a>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row row-offcanvas row-offcanvas-left">
+
+            <div class="col-xs-12 pull-right">
+                <div class="row">
+                    <div class="off-canvas-content">
+                      <div class="row">
+                      <div style="width: 100%;
+                      Height:100vh;">
+                      <ul class="quick-nav clearfix">
+                            <li class="user-link hide">
+                                <i class="ko-user"></i><span>Add User</span>
+                            </li>
+                            <li class="user-group-link hide">
+                                <i class="ko-user-group"></i><span>Add Group</span>
+                            </li>
+                            <li class="campaign-link hide">
+                                <i class="ko-clock"></i><span>Add Add Campaign</span>
+                            </li>
+                            <li class="device-link hide">
+                                <i class="ko-smart-phone"></i><span>Add Device</span>
+                            </li>
+                            <li class="app-link hide"><i class="ko-grid-1"></i><span>Add App</span>
+                            </li>
+                            <li class="scan-link hide">
+                                <i class="ko-search ko-scan"></i><span>Run Scan</span>
+                            </li>
+                            <li class="firmware-link hide">
+                                <i class="ko-ram"></i><span>Add Firmware</span>
+                            </li>
+                    </ul>
+                      <ul class="quick-links clearfix">
+                            <li><h3>Quick Links</h3></li>
+                            <li class="user-link">
+                                <i class="ko-user" data-original-title="Add User" data-toggle="tooltip" data-placement="top"></i>
+                                <input data-toggle="toggle" data-on="+" data-off="—" type="checkbox" class="plus-minus-toggle">
+                            </li>
+                            <li class="user-group-link">
+                                <i class="ko-user-group" data-original-title="Add Group" data-toggle="tooltip" data-placement="top"></i>
+                                <input data-toggle="toggle" data-on="+" data-off="—" type="checkbox" class="plus-minus-toggle">
+                            </li>
+                            <li class="campaign-link">
+                                <i class="ko-clock" data-original-title="Add Campaign" data-toggle="tooltip" data-placement="top"></i>
+                                <input data-toggle="toggle" data-on="+" data-off="—" type="checkbox" class="plus-minus-toggle">
+                            </li>
+                            <li class="device-link">
+                                <i class="ko-smart-phone" data-original-title="Add Device" data-toggle="tooltip" data-placement="top"></i>
+                                <input data-toggle="toggle" data-on="+" data-off="—" type="checkbox" class="plus-minus-toggle">
+                            </li>
+                            <li class="app-link"><i class="ko-grid-1" data-original-title="Add App" data-toggle="tooltip" data-placement="top"></i>
+                                <input data-toggle="toggle" data-on="+" data-off="—" type="checkbox" class="plus-minus-toggle">
+                            </li>
+                            <li class="scan-link">
+                                <i class="ko-search ko-scan" data-original-title="Run Scan" data-toggle="tooltip" data-placement="top"></i>
+                                <input data-toggle="toggle" data-on="+" data-off="—" type="checkbox" class="plus-minus-toggle">
+                            </li>
+                            <li class="firmware-link">
+                                <i class="ko-ram" data-original-title="Add Firmware" data-toggle="tooltip" data-placement="top"></i>
+                                <input data-toggle="toggle" data-on="+" data-off="—" type="checkbox" class="plus-minus-toggle">
+                            </li>
+                        </ul>
+
+                    </div>
+
+                      </div>
+                    <!--/.col-xs-12-->
+                  </br>
+<div class="table-wrap">
+<h2><i class="ko-clock"></i>Campaigns</h2>
+<table id="campaignTable" class="table table-striped table-bordered" cellspacing="0">
+  <thead>
+            <tr>
+                <th>Name</th>
+                <th>Priority</th>
+                <th>TPS</th>
+                <th>Type</th>
+                <th>Create Date</th>
+                <th>Start date</th>
+                <th>End Date</th>
+                <th>Finish Date</th>
+                <th>Devices Date</th>
+                <th>MSM User</th>
+                <th>Status</th>
+                <th>Edit</th>
+                <th>Delete</th>
+                <th>Report</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Priority</th>
+                <th>TPS</th>
+                <th>Type</th>
+                <th>Create Date</th>
+                <th>Start date</th>
+                <th>End Date</th>
+                <th>Finish Date</th>
+                <th>Devices Date</th>
+                <th>MSM User</th>
+                <th>Status</th>
+                <th></th>
+                <th></th>
+                <th></th>
+
+            </tr>
+        </tfoot>
+</table>
+</div>
+           </div>
+              </div>
+                <!--/row-->
+            </div>
+            <!--/.col-xs-12.col-sm-9-->
+            <div id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+              <span class="sr-only">Main navigation</span>
+              <div class="tree-menu" id="guideNav">
+                <ul class="nav nav-sidenav trunk">
+                  <li class="twig"><a href="#overviewL" class="leaf" data-toggle="collapse" data-target="#overviewMenu">Overview</a>
+                    <ul class="collapse branch" id="overviewMenu">
+                      <li class="twig"><a href="#aboutL" class="leaf">About this guide</a>
+                      </li>
+                      <li class="twig"><a href="#usageL" class="leaf">Usage</a>
+                      </li>
+                  </ul>
+                  </li>
+                  <li class="twig"><a href="#gridL" class="leaf" data-target="#gridMenu">Grid</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li class="twig"> <a href="#colorsL" data-target="#colorPaletteMenu">Color Palette</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li class="twig"><a href="#typographyL" class="leaf" data-target="#typographyMenu">Typography</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li class="twig"><a href="#iconographyL" class="leaf" data-target="#iconographyMenu">Iconography</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li class="twig"><a href="#!" class="leaf" data-toggle="collapse" data-target="#navigationMenu">Navigation</a>
+                    <ul class="collapse branch" id="navigationMenu">
+                          <li class="twig"><a href="#navigationL" class="leaf">Responsive Navigation Boiler Plates</a>
+                          </li>
+                          <li class="twig"><a href="#verticalMenuL" class="leaf">Vertical Menu</a>
+                          </li>
+                          <li class="twig"><a href="#treeMenuL" class="leaf">Tree Menu</a>
+                          </li>
+                          <li class="twig"><a href="#jsTreeL" class="leaf">JS Tree Menu</a>
+                          </li>
+                          <li class="twig"><a href="#tabsL" class="leaf">Tabs</a>
+                          </li>
+                    </ul>
+                  </li>
+                  <li class="divider"></li>
+                  <li class="twig"><a href="#!" class="leaf" data-toggle="collapse" data-target="#htmlElementsMenu">HTML Elements</a>
+                    <ul class="collapse branch" id="htmlElementsMenu">
+                      <li class="twig"><a href="#headingsL" class="leaf">Headings</a>
+                      </li>
+                      <li class="twig"><a href="#paragraphsL" class="leaf">Paragraphs</a>
+                      </li>
+                      <li class="twig"><a href="#linksL" class="leaf">Links</a>
+                      </li>
+                      <li class="twig"><a href="#!" class="leaf" data-toggle="collapse" data-target="#buttonsMenu">Buttons</a>
+                        <ul class="collapse branch" id="buttonsMenu">
+                          <li class="twig"><a href="#defaultButtonsL" class="leaf">Default Button</a>
+                          </li>
+                          <li class="twig"><a href="#buttonsWithIconsL" class="leaf">Buttons With Icons</a>
+                          </li>
+                          <li class="twig"><a href="#iconButtonsL" class="leaf">Icon Only Buttons</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="twig"><a href="#!" class="leaf" data-toggle="collapse" data-target="#tablesMenu">Tables</a>
+                        <ul class="collapse branch" id="tablesMenu">
+                          <li class="twig"><a href="#basicTableL" class="leaf">Table</a>
+                          </li>
+                          <li class="twig"><a href="#dataTableL" class="leaf">Data Table</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="twig"><a href="#!" class="leaf" data-toggle="collapse" data-target="#formsMenu">Forms</a>
+                        <ul class="collapse branch" id="formsMenu">
+                          <li class="twig"><a href="#formElementsL" class="leaf">Single Column</a>
+                          </li>
+                          <li class="twig"><a href="#multiColumnFormElementsL" class="leaf">Multi Column</a>
+                          </li>
+                        </ul>
+                      </li>
+                  </ul>
+                  </li>
+                  <li class="divider"></li>
+                  <li class="twig"><a href="#!" class="leaf" data-toggle="collapse" data-target="#componentsMenu">Other Components</a>
+                    <ul class="collapse branch" id="componentsMenu">
+                          <li class="twig"><a href="#headerL" class="leaf">Header</a>
+                          </li>
+                          <li class="twig"><a href="#accordionL" class="leaf">Accordion</a>
+                          </li>
+                          <li class="twig"><a href="#tooltipsL" class="leaf">Tooltip</a>
+                          </li>
+                          <li class="twig"><a href="#popoversL" class="leaf">Popover</a>
+                          </li>
+                          <li class="twig"><a href="#modalL" class="leaf">Modal</a>
+                          </li>
+                          <li class="twig"><a href="#loginL" class="leaf">Login</a>
+                          </li>
+                          <li class="twig"><a href="#spinnerL" class="leaf">Loading spinner</a>
+                          </li>
+                          <li class="twig"><a href="#badgesL" class="leaf">Badge</a>
+                          </li>
+                          <li class="twig"><a href="#switchL" class="leaf">Toggle Switch</a>
+                          </li>
+                          <li class="twig"><a href="#sliderL" class="leaf">Slider</a>
+                          </li>
+                          <li class="twig"><a href="#errorL" class="leaf">Errors</a>
+                          </li>
+                        </ul>
+                  </li>
+                  <li class="divider"></li>
+                  <li class="twig"><a href="#!" class="leaf"data-target="#usageMenu">Scripts</a>
+                  </li>
+                  <li class="divider"></li>
+                </ul>
+              </div> 
+              </div>                   
+            <!--/.sidebar-offcanvas-->
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="libs/jquery/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="libs/jquery.mustache.js"></script>
+    <script src="libs/mustache.min.js"></script>
+    <script src="libs/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="libs/dataTables/media/js/jquery.dataTables.min.js"></script>
+    <script src="libs/dataTables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
+    <script src="libs/dataTables/media/js/dataTables.bootstrap.min.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="libs/jstree/jstree.min.js"></script>
+    <script src="libs/bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+    <script src="libs/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
+    <link href="libs/bootstrap-toggle/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script type="text/javascript">
+       
+        //toggle active guide nav
+        $("#guideNav .leaf").click(function(){
+          $("#guideNav .leaf").removeClass("active");
+          $(this).addClass("active");
+        }); 
+        //Quick links
+        $('.quick-links li').on('click', '.toggle-group .btn', function(){
+            var qLink = '.quick-nav .' + $(this).parents('li').attr('class');
+            if($(this).parents('.toggle').hasClass('off')){
+                $(qLink).removeClass('hide');
+            }else{
+                $(qLink).addClass('hide');
+            }
+
+        });
+        $(document).ready(function(){
+        $('.quick-links .toggle-group').each(function(){
+        var qLink = '.quick-nav .' + $(this).parents('li').attr('class');
+            if($(this).parents('.toggle').hasClass('off')){
+                $(qLink).addClass('hide');
+            }else{
+                $(qLink).removeClass('hide');  
+            }
+        });
+        
+         //initialize the data table
+      $('#campaignTable').dataTable({
+        'ajax': 'campaigns.json',
+        'columns': [
+            { 'data': 'name' },
+            { 'data': 'priority' },
+            { 'data': 'tps' },
+            { 'data': 'type' },
+            { 'data': 'create_date' },
+            { 'data': 'start_date' },
+            { 'data': 'end_date' },
+            { 'data': 'finish_date' },
+            { 'data': 'devices' },
+            { 'data': 'msm_user' },
+            { 'data': 'status' },
+            { 'data': 'id' },
+            { 'data': 'id' },
+            { 'data': 'id' }
+        ],
+        //remove sorting form edit, delete and report columns
+        'columnDefs': [ { 'targets': [11,12,13], 'orderable': false },
+        //display status and add status icon
+                        {'targets': 10, 'data':'id', 'render':function(status){
+                            return '<span class="status '+status+'">'+status+'</span><div class="i-btn status"><i class="ko- '+status+'"></i></div>';
+                          }
+                        },
+        //add edit, delete and report icons with obj id
+                        {'targets': 11, 'render': function(id){
+                            return '<div class="i-btn" id="edit_'+id +'"><i class="ko-pencil edit"></i></div>';
+                          }
+                        },
+                        {'targets': 12, 'render': function(id){
+                            return '<div class="i-btn" id="delete_'+id +'"><i class="delete">&times;</i></div>';
+                          }
+                        },
+                          {'targets': 13, 'render': function(id){
+                            return '<div class="i-btn" id="report_'+id +'"><i class="ko-download report"></i></div>';
+                          }
+                        }],
+        // Add pagination
+        'pagingType': 'full_numbers',
+        colReorder: true,
+        bAutoWidth: false
+        }); 
+    //Add Campaign button
+        $('#campaignTable_length').append('<button id="addCampaign" name="add-campaign" class="btn btn-primary"><i class="ko-plus"></i>Add Campaign</button>');
+     //Add advance search link   
+        $('#campaignTable_filter').prepend('<a class="a-search" id="advanceSearch"><i class="ko-search"></i>Advance Search</a>');
+    // Add a text input to each footer cell
+    $('#campaignTable tfoot th').each( function () {
+        var title = $(this).text();
+        if(title ==""){
+          $(this).html( '<input type="text" class="col-search mystic" readonly="readonly" />' );
+        }else{
+          $(this).html( '<input type="text" class="col-search" placeholder="Filter '+title+'" />' );
+        }
+    });
+ 
+    // DataTable
+    var table = $('#campaignTable').DataTable();
+ 
+    // Apply the search
+    table.columns().every( function () {
+        var that = this;
+ 
+        $( 'input', this.footer() ).on( 'keyup change', function () {
+            if ( that.search() !== this.value ) {
+                that
+                    .search( this.value )
+                    .draw();
+            }
+        });
+    });
+
+
+      // initialise bootstrap-select 
+      $('select').selectpicker();
+
+        });
+
+       
+    </script>
+</body>
+
+
+</html>

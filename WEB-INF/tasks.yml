@@ -1,0 +1,7 @@
+- !com.motive.sm.webapp.tasks.JobStatusTaskManager
+   pollingInterval: 3000
+   numberOfThreads: 2
+- !com.motive.sm.webapp.tasks.JobInstanceTaskManager
+   pollingInterval: 3000
+   numberOfThreads: 1
+   timeoutInterval: 420000

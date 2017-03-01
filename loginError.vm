@@ -1,0 +1,6 @@
+#parse("login.vm")
+<script language="javascript" type="text/javascript">
+var d = document.getElementById("loginErrorId");
+d.className = d.className + " error";
+d.innerHTML='The user name and/or password are invalid. Try re-typing them.';
+</script>
